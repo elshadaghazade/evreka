@@ -76,16 +76,29 @@ WSGI_APPLICATION = 'evreka_question3.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/1.11/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'evreka_db2',
-        'PASSWORD': 'f26b8ab553cfd4767216dbc7be7702fcad1b0115a6347e871faab86174d7ed4e',
-        'HOST': '127.0.0.1',
-        'PORT': 5434,
-        'USER': 'evreka_user'
+if DEBUG:
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.postgresql',
+            'NAME': 'evreka_db2',
+            'PASSWORD': 'f26b8ab553cfd4767216dbc7be7702fcad1b0115a6347e871faab86174d7ed4e',
+            'HOST': '127.0.0.1',
+            'PORT': 5434,
+            'USER': 'evreka_user'
+        }
     }
-}
+else:
+    # postgres://eiacvcohqtcsjc:4ac21177cb4e29a025279d1eab1c5ac714a84e60d192250f494197feb41d3a95@ec2-46-137-159-254.eu-west-1.compute.amazonaws.com:5432/df7j0fiaffuq90
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.postgresql',
+            'NAME': 'df7j0fiaffuq90',
+            'PASSWORD': '4ac21177cb4e29a025279d1eab1c5ac714a84e60d192250f494197feb41d3a95',
+            'HOST': 'ec2-46-137-159-254.eu-west-1.compute.amazonaws.com',
+            'PORT': 5432,
+            'USER': 'eiacvcohqtcsjc'
+        }
+    }
 
 
 # Password validation
@@ -125,3 +138,7 @@ USE_TZ = False
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
 
 STATIC_URL = '/static/'
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, "static")
+]
+STATIC_ROOT = os.path.join(BASE_DIR, "collectedstatics")

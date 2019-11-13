@@ -88,14 +88,14 @@ if DEBUG: # for local usage
         }
     }
 else: # for heroku (don't touch)
-    # postgres://onbcnsgioxzucg:1d192857a56d60b43eb8f35a7eea5217390954149ca282c0c54dd95d9845bb27@ec2-54-217-225-16.eu-west-1.compute.amazonaws.com:5432/dbsjvl114p6ga3
+    # postgres://jmrgkggokplrnb:5c06293ee241a232b5697c6e891fa67cb2058a8fd882bd1bbc60b8e00401a8ab@ec2-54-247-92-167.eu-west-1.compute.amazonaws.com:5432/d5n09t13r8t27h
     DATABASES = {
         'default': {
             'ENGINE': 'django.db.backends.postgresql',
-            'NAME': 'dbsjvl114p6ga3',
-            'USER': 'onbcnsgioxzucg',
-            'PASSWORD': '1d192857a56d60b43eb8f35a7eea5217390954149ca282c0c54dd95d9845bb27',
-            'HOST': 'ec2-54-217-225-16.eu-west-1.compute.amazonaws.com',
+            'NAME': 'd5n09t13r8t27h',
+            'USER': 'jmrgkggokplrnb',
+            'PASSWORD': '5c06293ee241a232b5697c6e891fa67cb2058a8fd882bd1bbc60b8e00401a8ab',
+            'HOST': 'ec2-54-247-92-167.eu-west-1.compute.amazonaws.com',
             'PORT': 5432
         }
     }
