@@ -1,6 +1,6 @@
 # Question 2
 
-Public link: [https://elshadaghazade.github.io/evreka/evreka_question2/](https://elshadaghazade.github.io/evreka/evreka_question2/)
+Public Demo App: [https://elshadaghazade.github.io/evreka/evreka_question2/default.html](https://elshadaghazade.github.io/evreka/evreka_question2/default.html)
 
 ## Demo Video
 
