@@ -1,6 +1,6 @@
 # Question 2
 
-Public link: [https://elshadaghazade.github.io/evreka_q2/index.html](https://elshadaghazade.github.io/evreka_q2/index.html)
+Public link: [https://elshadaghazade.github.io/evreka/evreka_question2/](https://elshadaghazade.github.io/evreka/evreka_question2/)
 
 ## Demo Video
 
