@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Routes</title>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+    <link id="bsdp-css" href="https://unpkg.com/bootstrap-datepicker@1.9.0/dist/css/bootstrap-datepicker3.min.css" rel="stylesheet">
+    <link href="./assets/css/style.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/e407975957.js" crossorigin="anonymous"></script>
+    <!-- <link href="https://cdn.datatables.net/1.10.20/css/jquery.dataTables.min.css" rel="stylesheet"> -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.20/css/dataTables.bootstrap4.min.css">
+</head>
+<body>
+    <div class="container-fluid">
+        <header>
+            <div class="row">
+                <div class="col-lg-3 col-md-4 col-sm-12 col-xs-12 text-left">
+                    <div class="row">
+                        <div class="col-sm-2"><i class="fas fa-map"></i></div>
+                        <div class="col-sm-10">
+                            <div class="input-group date">
+                                <input type="text" class="form-control"><span class="input-group-addon"><i class="far fa-calendar-alt"></i></span>
+                                <button type="button" class="input-group btn btn-primary btn-search"><i class="fas fa-arrow-right"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-8 col-md-6 col-sm-12 col-xs-12"></div>
+                <div class="col-lg-1 col-md-2 col-sm-12 col-xs-12 text-right"><button type="button" class="btn-add btn btn-primary"><i class="fas fa-plus"></i></button></div>
+            </div>
+        </header>
+        <div class="content">
+            <section>
+                <h2>Routes</h2>
+                <div><i class="fas fa-clipboard-list"></i> <a href="" class="create-report-lnk">Create report</a></div>
+            </section>
+            <section class="table-section table-responsive">
+                <table id="route-table" class="table" style="width: 100%;">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Vehicle</th>
+                            <th>Time</th>
+                            <th>Driver</th>
+                            <th>Helper</th>
+                            <th>Performance</th>
+                            <th>Status</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>13:30 Vardiyası</td>
+                            <td>Fenertepe</td>
+                            <td>13:12</td>
+                            <td>Tanır Nalbant</td>
+                            <td>-</td>
+                            <td>66/103</td>
+                            <td class="dispatched">Dispatched</td>
+                            <td><i class="fas fa-route"></i></td>
+                        </tr>
+                        <tr>
+                            <td>13:30 Vardiyası</td>
+                            <td>Boğazköy</td>
+                            <td>13:11</td>
+                            <td>Selçuk Yurt</td>
+                            <td>-</td>
+                            <td>58/85</td>
+                            <td>Finished</td>
+                            <td><i class="fas fa-route"></i></td>
+                        </tr>
+                        <tr>
+                            <td>07:30 Vardiyası</td>
+                            <td>Başakşehir</td>
+                            <td>07:30</td>
+                            <td>Emri Akça</td>
+                            <td>-</td>
+                            <td>108/148</td>
+                            <td>Finished</td>
+                            <td><i class="fas fa-route"></i></td>
+                        </tr>
+                        <tr>
+                            <td>07:30 Vardiyası</td>
+                            <td>4.5. Etap</td>
+                            <td>07:30</td>
+                            <td>Yaşar Demir</td>
+                            <td>-</td>
+                            <td>121/138</td>
+                            <td>Finished</td>
+                            <td><i class="fas fa-route"></i></td>
+                        </tr>
+                        <tr>
+                            <td>07:30 Vardiyası</td>
+                            <td>Kayaşehir</td>
+                            <td>07:30</td>
+                            <td>Ömer Osman Ekiz</td>
+                            <td>-</td>
+                            <td>97/146</td>
+                            <td>Finished</td>
+                            <td><i class="fas fa-route"></i></td>
+                        </tr>
+                        <tr>
+                            <td>07:30 Vardiyası</td>
+                            <td>Bşk.&Ağa.</td>
+                            <td>07:30</td>
+                            <td>Mahmut Mercan</td>
+                            <td>-</td>
+                            <td>52/98</td>
+                            <td>Finished</td>
+                            <td><i class="fas fa-route"></i></td>
+                        </tr>
+                        <tr>
+                            <td>07:30 Vardiyası</td>
+                            <td>Bahçeşehir</td>
+                            <td>07:30</td>
+                            <td>Murat Uçanoğlu</td>
+                            <td>-</td>
+                            <td>55/107</td>
+                            <td>Finished</td>
+                            <td><i class="fas fa-route"></i></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+        </div>
+        <footer></footer>
+    </div>
+
+    <!-- Change menu -->
+    <div class="change-menu">
+        <ul>
+            <li id="change" data-toggle="modal" data-target="#changeModal">Change</li>
+            <li id="swap">Swap</li>
+        </ul>
+    </div>
+    <!-- Change menu ends -->
+
+    <!-- Bootstrap modal -->
+    <div class="modal fade" id="changeModal" tabindex="-1" role="dialog" aria-labelledby="changeModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="changeModalLabel"></h4>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="change-vehicle-inner">
+                    <h3>Change Vehicle</h3>
+                    <div class="row">
+                        <div class="col-sm-10 col-xs-9">4.5. Etap</div>
+                        <div class="col-sm-2 col-xs-3"><button type="button" class="btn"><i class="fas fa-exchange-alt"></i></button></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-10 col-xs-9">Başakşehir</div>
+                        <div class="col-sm-2 col-xs-3"><button type="button" class="btn"><i class="fas fa-exchange-alt"></i></button></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-10 col-xs-9">Kayaşehir</div>
+                        <div class="col-sm-2 col-xs-3"><button type="button" class="btn"><i class="fas fa-exchange-alt"></i></button></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-10 col-xs-9">Bahçeşehir</div>
+                        <div class="col-sm-2 col-xs-3"><button type="button" class="btn"><i class="fas fa-exchange-alt"></i></button></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-10 col-xs-9">Fenertepe</div>
+                        <div class="col-sm-2 col-xs-3"><button type="button" class="btn"><i class="fas fa-exchange-alt"></i></button></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-10 col-xs-9">Boğazköy</div>
+                        <div class="col-sm-2 col-xs-3"><button type="button" class="btn"><i class="fas fa-exchange-alt"></i></button></div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <!-- <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button> -->
+            </div>
+            </div>
+        </div>
+    </div>
+    <!-- Bootstrap modal ends -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/bootstrap-datepicker@1.9.0/dist/js/bootstrap-datepicker.min.js"></script>
+    <script src="https://unpkg.com/bootstrap-datepicker@1.9.0/dist/locales/bootstrap-datepicker.en-GB.min.js" charset="UTF-8"></script>
+    <script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
+    <script type="text/javascript" language="javascript" src="https://cdn.datatables.net/1.10.20/js/dataTables.bootstrap4.min.js"></script>
+    <script src="./assets/js/scripts.js"></script>
+</body>
+</html>
